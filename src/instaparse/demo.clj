@@ -1,4 +1,4 @@
-(ns parse-demo.core
+(ns instaparse.demo
   (:require [instaparse.core :as insta])
   (:gen-class))
 
