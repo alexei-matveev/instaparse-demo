@@ -1,36 +1,18 @@
-# parse-demo
+# Test AOT compilation of Instaparse
 
-FIXME: description
+    lein uberjar
+    time java -jar ./target/uberjar/parse-demo-0.1.0-SNAPSHOT-standalone.jar aaabbb
 
-## Installation
+This takes more than a second on my machine ...
 
-Download from http://example.com/FIXME.
+    native-image --report-unsupported-elements-at-runtime -jar ./target/uberjar/parse-demo-0.1.0-SNAPSHOT-standalone.jar
+    time ./parse-demo-0.1.0-SNAPSHOT-standalone  aaabbb
 
-## Usage
-
-FIXME: explanation
-
-    $ java -jar parse-demo-0.1.0-standalone.jar [args]
-
-## Options
-
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
+This takes 10ms. The compilation is lengthy though.
 
 ## License
 
-Copyright © 2018 FIXME
+Copyright © 2018 Alexei Matveev <alexei.matveev@gmail.com>
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.
