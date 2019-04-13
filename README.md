@@ -1,5 +1,12 @@
 # Test AOT compilation of Instaparse
 
+WARNING: Never got it running with the recent Clojure 1.10. It does
+seem as if it may be a dead end without Cognitec behind "native
+compilation".
+
+See also blog
+[post](https://www.innoq.com/en/blog/native-clojure-and-graalvm/).
+
     lein uberjar
     time java -jar ./target/uberjar/instaparse-demo-0.1.0-SNAPSHOT-standalone.jar aaabbb
 
